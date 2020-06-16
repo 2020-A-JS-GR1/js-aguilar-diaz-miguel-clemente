@@ -21,3 +21,18 @@ console.log(typeof string);
 console.log(typeof booleano);
 console.log(typeof objeto);
 console.log(typeof indefinido);
+
+
+const miguel = {
+    nombre: "Miguel",  // llave: valor,
+    "apellido": "Aguilar",  // se puede poner la llave con comillas pero no se recomienda
+    edad: 23,
+    hijos: null,
+    zapatos: undefined,
+    ropa: {
+        color: "naranja",
+        talla: "M"
+    },
+    mascotas: ["Oracio", "Peluza"],
+};  // object
+
