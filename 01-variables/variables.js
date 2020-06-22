@@ -36,3 +36,11 @@ const miguel = {
     mascotas: ["Oracio", "Peluza"],
 };  // object
 
+miguel.nombre;
+miguel['nombre']
+
+miguel.nombre=undefined
+
+delete miguel.nombre
+
+console.log(miguel.key)
