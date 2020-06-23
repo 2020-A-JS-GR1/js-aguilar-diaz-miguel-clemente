@@ -57,7 +57,7 @@ const respuestaFind=arreglo.find(
     }
 )
 
-console.log(respuestaFind);
+// console.log(respuestaFind);
 
 const respuestaMap=arreglo.map(
     (valor, indice, arreglo)=>{
@@ -67,7 +67,7 @@ const respuestaMap=arreglo.map(
     }
 )
 
-console.log(respuestaMap)
+// console.log(respuestaMap)
 
 const respuestaMap2=arreglo.map(
     (valor, indice, arreglo)=>{
@@ -76,7 +76,7 @@ const respuestaMap2=arreglo.map(
     }
 )
 
-console.log(respuestaMap2)
+// console.log(respuestaMap2)
 
 const respuestaFilter=arreglo.filter(
     (value)=>{
@@ -84,9 +84,41 @@ const respuestaFilter=arreglo.filter(
     }
 )
 
-console.log(respuestaFilter)
+// console.log(respuestaFilter)
 
 var cadena = "lola";
 var numeroVocales = cadena.match(/[aeiou]/gi).length;
 
-console.log(numeroVocales);
+// console.log(numeroVocales);
+
+// Operador or
+
+const respuestaSome=arreglo.some((elemento, index, arreglo)=>{
+    return elemento.nota<4;
+})
+
+// console.log(respuestaSome);
+
+const respuestaEvery=arreglo.every((elemento, index, arreglo)=>{
+    return elemento.nota<4;
+})
+
+// console.log(respuestaEvery);
+
+const resultadoReduce=arreglo.reduce(
+    (valoracumulado, valoractual)=>{
+        valoracumulado+=valoractual.nota;
+        return valoracumulado/=2;
+    },
+    0
+)
+
+// console.log(resultadoReduce);
+
+
+const resultado=arreglo
+.map(v=>v.nota*1.3)
+.filter(v=>v>9)
+.reduce((acumulador,v)=>(v+acumulador)/2,0);
+
+console.log(resultado);
