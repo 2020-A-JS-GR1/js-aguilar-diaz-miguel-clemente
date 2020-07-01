@@ -15,3 +15,4 @@ function parametroInfinitos(...params) {
 }
 
 console.log(parametroInfinitos(1, 2, 3));
+
