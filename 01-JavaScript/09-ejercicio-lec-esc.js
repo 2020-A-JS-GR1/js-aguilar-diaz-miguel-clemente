@@ -35,4 +35,4 @@ function leerArchivo(dirreccion) {
 //         }
 //     )
 
-module.exports = {leerArchivo,escribirArchivo}
+module.exports = { leerArchivo, escribirArchivo }
