@@ -1,7 +1,7 @@
 const fs = require('fs');
 const fsPromises = fs.promises;
 
-const direccionArchivo = __dirname + '/09-ejejcicio-lec-esc-promesas'
+const direccionArchivo = __dirname + '/archivos/09-ejejcicio-lec-esc-promesas'
 
 function escribirArchivo(dirreccion, contenido) {
     return fsPromises.appendFile(dirreccion, contenido);
