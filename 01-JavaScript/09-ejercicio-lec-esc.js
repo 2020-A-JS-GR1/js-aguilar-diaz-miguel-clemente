@@ -11,26 +11,28 @@ function leerArchivo(dirreccion) {
     return fsPromises.readFile(dirreccion, 'utf-8');
 }
 
-leerArchivo(direccionArchivo)
-    .then(
-        valor => {
-            console.log("Contenido del archivo: \n", valor);
-            return escribirArchivo(direccionArchivo, "\nahora no!!! \n")
-        }
-    )
-    .then(
-        () => {
-            console.log('Archivo escrito');
-            return leerArchivo(direccionArchivo)
-        }
-    )
-    .then(
-        valor => {
-            console.log("Contenido del archivo: ", valor);
-        }
-    )
-    .catch(
-        error => {
-            console.error(error);
-        }
-    )
+// leerArchivo(direccionArchivo)
+//     .then(
+//         valor => {
+//             console.log("Contenido del archivo: \n", valor);
+//             return escribirArchivo(direccionArchivo, "\nahora no!!! \n")
+//         }
+//     )
+//     .then(
+//         () => {
+//             console.log('Archivo escrito');
+//             return leerArchivo(direccionArchivo)
+//         }
+//     )
+//     .then(
+//         valor => {
+//             console.log("Contenido del archivo: ", valor);
+//         }
+//     )
+//     .catch(
+//         error => {
+//             console.error(error);
+//         }
+//     )
+
+module.exports = {leerArchivo,escribirArchivo}
