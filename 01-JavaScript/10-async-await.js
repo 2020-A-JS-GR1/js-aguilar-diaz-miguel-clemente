@@ -1,6 +1,6 @@
 
-const promesaLeerArchivo = ()=>new Promise((resolve, reject) => {resolve("listo leer")});
-const promesaEscribirArchivo = ()=>new Promise((resolve, reject) => {resolve("listo escribir")});
+const promesaLeerArchivo = () => new Promise((resolve, reject) => { resolve("listo leer") });
+const promesaEscribirArchivo = () => new Promise((resolve, reject) => { resolve("listo escribir") });
 
 async function ejercicio() {
     try {
@@ -11,11 +11,12 @@ async function ejercicio() {
         console.log(respuesta2);
         console.log(2);
     } catch (e) {
-        console.log('error', e)
+        console.log('error', e);
     }
 }
 
-const respuestaEjercicio=ejercicio();
+const respuestaEjercicio = ejercicio();
 // console.log(respuestaEjercicio);
-// console.log(promesaLeerArchivo());
-// console.log(promesaEscribirArchivo());
+
+console.log(promesaLeerArchivo());
+console.log(promesaEscribirArchivo());
