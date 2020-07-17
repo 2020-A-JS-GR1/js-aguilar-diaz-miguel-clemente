@@ -33,7 +33,7 @@ const miguel = {
         color: "naranja",
         talla: "M"
     },
-    mascotas: ["Oracio", "Peluza"],
+    mascotas: ["Oracio", "Pelusa"],
 };  // object
 
 miguel.nombre;
