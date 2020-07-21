@@ -32,7 +32,7 @@ module.exports = {
         return new Promise((res, rej) => {
             const datos = this.data.find(
                 val => {
-                    return id === val.id;
+                    return Number(id) === val.id;
                 }
             )
             res(datos)
@@ -56,6 +56,9 @@ module.exports = {
             try {
                 libro = JSON.stringify(libro);
                 libro = JSON.parse(libro);
+                libro.id=Number(libro.id);
+                libro.habilitado=(libro.habilitado=='true')
+                libro.avaluo=Number(libro.avaluo)
                 this.data.push(libro);
                 res();
             } catch (e) {
@@ -65,7 +68,7 @@ module.exports = {
     },
     delete: (id) => {
         return new Promise((res, rej) => {
-            this.data = this.data.filter(value => value.id !== id)
+            this.data = this.data.filter(value => value.id !== Number(id))
             res(this.data)
         })
     },
@@ -74,7 +77,7 @@ module.exports = {
             try {
                 const key = Object.keys(param);
                 const algo = this.data
-                    .filter(value => value.id === id)
+                    .filter(value => value.id === Number(id))
                     .map(value => value[key[0]] = param[key[0]]);
                 res(algo);
             } catch (e) {

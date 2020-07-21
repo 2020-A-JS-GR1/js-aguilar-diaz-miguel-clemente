@@ -1,1 +1,1 @@
-[{"id":3,"nombre":"lo que el viento se llevo","prestado":false,"costo":12.3},{"id":2,"nombre":"lol","prestado":false,"costo":12.3}]
+[{"id":1,"nombre":"lo que el viento se llevo","prestado":true,"costo":12.3,"id_libreria":1},{"id":2,"nombre":"Paquita la del barrio","prestado":false,"costo":12.3,"id_libreria":"1"}]
