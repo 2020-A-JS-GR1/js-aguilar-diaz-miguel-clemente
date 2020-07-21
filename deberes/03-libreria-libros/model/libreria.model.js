@@ -56,9 +56,9 @@ module.exports = {
             try {
                 libro = JSON.stringify(libro);
                 libro = JSON.parse(libro);
-                libro.id=Number(libro.id);
-                libro.habilitado=(libro.habilitado=='true')
-                libro.avaluo=Number(libro.avaluo)
+                libro.id = Number(libro.id);
+                libro.habilitado = (libro.habilitado == 'true')
+                libro.avaluo = Number(libro.avaluo)
                 this.data.push(libro);
                 res();
             } catch (e) {
@@ -75,6 +75,7 @@ module.exports = {
     update: (id, param) => {
         return new Promise((res, rej) => {
             try {
+                param = transformDataUpdate(param);
                 const key = Object.keys(param);
                 const algo = this.data
                     .filter(value => value.id === Number(id))
@@ -85,4 +86,24 @@ module.exports = {
             }
         })
     },
+    show:()=>this.data
+}
+
+function transformDataUpdate(param) {
+    const key = Object.keys(param);
+    switch (key[0]) {
+        case 'nombre':
+            param[key[0]] = param[key[0]];
+            break;
+        case 'direccion':
+            param[key[0]] = param[key[0]];
+            break;
+        case 'habilitado':
+            param[key[0]] = param[key[0]] == 'true';
+            break;
+        default:
+            param[key[0]] = Number(param[key[0]]);
+            break;
+    }
+    return param;
 }

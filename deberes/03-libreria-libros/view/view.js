@@ -26,7 +26,8 @@ module.exports.view = {
                     val = initArray.indexOf(val.init);
                     switch (val) {
                         case 4: //Mostrar Todo
-                            this.view.init();
+                        
+                            this.view.mostrarTodo();
                             break;
                         case 5: //Salir
                             console.log('See you next time');
@@ -272,5 +273,11 @@ module.exports.view = {
                 }
             )
     },
-    mostrarTodo: () => { },
+    mostrarTodo: () => { 
+        console.log('#################  LIBROS  ####################');
+        console.log(libro.show());
+        console.log('################# LIBRERIAS ####################');
+        console.log(libreria.show());
+        this.view.init();
+    },
 }
